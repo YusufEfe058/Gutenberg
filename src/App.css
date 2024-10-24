@@ -1,38 +1,271 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
+
+body {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*-------------------------------------------------------------------LOGIN--------------------------------------------------------------------*/
+
+.login-page {
   text-align: center;
+  margin-top: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-btn {
+  background-color: #db4437;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------Navbar---------------------------------------------------------------------- */
+nav {
+  background-color: #ffc0cb;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-title {
+  flex: 1;
+}
+
+.title {
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  gap: 40px;
+}
+
+.nav-link:hover {
+  color: #ff1493;
+}
+
+.nav-link.active {
+  color: #ff1493;
+}
+
+.nav-logout {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.profile {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.logout-btn {
+  cursor: pointer;
+  background-color: #ffc0cb;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.logout-btn:hover {
+  text-decoration: underline;
+  color: red;
+}
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------NAVBAR ALTI (SEARCHBAR-KİTAP LİSTESİ)--------------------------------------------*/
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.searchInput {
+  padding: 20px;
+  width: 400px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.searchButton {
+  background-color: #789DBC;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  margin-left: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.searchButton:hover {
+  background-color: #A2D2DF;
+}
+
+.clearButton {
+  background-color: #A04747;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.clearButton:hover {
+  background-color: #C96868;
+}
+
+.booksSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bookList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 70px;
+  margin: 30px 10px;
+}
+
+.bookItem {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 250px;
+  height: 500px;
+}
+
+.bookItem img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.bookItem h3, .bookItem p {
+  margin: 5px 0;
+}
+
+.bookItem button {
+  margin: 5px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #433878;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.bookItem button:hover {
+  background-color: #7E60BF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------OKUMA LİSTESİ-----------------------------------------------------------------*/
+
+.readingListContent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
 }
+
+.readingItem {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  height: 500px;
+}
+
+.readingItem img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.readingItem h3, .readingItem p {
+  margin: 5px 0;
+}
+
+.readingItem button {
+  margin: 5px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #433878;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.readingItem button:hover {
+  background-color: #7E60BF;
+}
+
+.message {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
